@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+    	
+    http://www.apache.org/licenses/LICENSE-2.0
+    	
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<beans>
+    
+	<!-- Overriding this bean to restrict createSite permissions -->
+    <bean id="SiteService_security" class="org.alfresco.repo.security.permissions.impl.acegi.MethodSecurityInterceptor">
+        <property name="authenticationManager"><ref bean="authenticationManager"/></property>
+        <property name="accessDecisionManager"><ref bean="accessDecisionManager"/></property>
+        <property name="afterInvocationManager"><ref bean="afterInvocationManager"/></property>
+        <property name="objectDefinitionSource">
+            <value>
+               org.alfresco.service.cmr.site.SiteService.cleanSitePermissions=ACL_NODE.0.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.createContainer=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.createSite=ACL_METHOD.GROUP_SITE_CREATORS
+               org.alfresco.service.cmr.site.SiteService.deleteSite=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.findSites=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.getContainer=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.listContainers=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.getMembersRole=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.getMembersRoleInfo=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.resolveSite=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.getSite=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.getSiteShortName=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.getSiteGroup=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.getSiteRoleGroup=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.getSiteRoles=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.getSiteRoot=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.hasContainer=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.hasCreateSitePermissions=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.hasSite=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.isMember=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.listMembers=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.listMembersInfo=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.listMembersPaged=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.listSites=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.listSitesPaged=ACL_ALLOW,AFTER_ACL_NODE.sys:base.ReadProperties
+               org.alfresco.service.cmr.site.SiteService.removeMembership=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.canAddMember=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.setMembership=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.updateSite=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.countAuthoritiesWithRole=ACL_ALLOW
+               org.alfresco.service.cmr.site.SiteService.*=ACL_DENY
+            </value>
+        </property>
+    </bean>
+    
+</beans>
