@@ -1,5 +1,5 @@
 <alfresco-config>
-
+<!--
       <config evaluator="string-compare" condition="WebFramework">
            <web-framework>
                <autowire>
@@ -8,7 +8,7 @@
                <disable-resource-caching>true</disable-resource-caching>
            </web-framework>
        </config>
-
+-->
 
     <!-- Global config section -->
     <config replace="true">
