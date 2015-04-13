@@ -9,7 +9,7 @@ This add-on gives you the ability to restrict Alfresco Share site creation to a 
 
 In addition, for users not in the group, the "welcome" dashlet's text changes to explain what a Share site is but does not imply that they have the ability to create one. A nice enhancement might be a link that launches a workflow to request a new site. (Pull requests welcome!)
 
-By default, the group the module looks for must have an ID of "GROUP_SITE_CREATORS". The display name can be anything.
+By default, the group the module looks for must have an ID of "GROUP_SITE_CREATORS". The display name can be anything. When you create the group you do not specify "GROUP_"--Alfresco will prepend that for you.
 
 This add-on also changes the low-level permissions so that even if someone figures out how to create a site without the user interface, the repository tier won't let them do that unless they are in the group.
 
@@ -17,7 +17,7 @@ Installation
 ------------
 There are two AMPs associated with this add-on. One is a "repo tier" AMP and the other is a "Share tier" AMP.
 
-For each of the two projects, use `mvn install` to create the AMP. By default the POM is set to depend on the latest stable Alfresco Community Edition version which is 4.2.f. This has not been tested with Alfresco 5.0.c and it has not been tested with Enterprise Edition.
+For each of the two projects, use `mvn install` to create the AMP. By default the POM is set to depend on the latest stable Alfresco Community Edition version which is 4.2.f. This will not work with 5.0.x. If you want to use this with 5.0.d use the code in the 5.0.d branch. This has not been tested with Enterprise Edition.
 
 ### Install the AMPs
 
