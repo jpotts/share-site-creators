@@ -17,7 +17,7 @@ Installation
 ------------
 There are two AMPs associated with this add-on. One is a "repo tier" AMP and the other is a "Share tier" AMP.
 
-For each of the two projects, use `mvn install` to create the AMP. By default the POM is set to depend on the latest stable Alfresco Community Edition version which is 4.2.f. This will not work with 5.0.x. If you want to use this with 5.0.d use the code in the 5.0.d branch. This has not been tested with Enterprise Edition.
+For each of the two projects, use `mvn install` to create the AMP. By default the POM is set to depend on the latest Alfresco Community Edition using the default specified by the SDK. This has not been tested with Alfresco Enterprise Edition.
 
 ### Install the AMPs
 
