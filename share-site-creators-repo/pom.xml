@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.alfresco.maven</groupId>
         <artifactId>alfresco-sdk-parent</artifactId>
-        <version>2.1.1</version>
+        <version>2.2.0</version>
     </parent>
 
     <!--
@@ -70,6 +70,21 @@
             <groupId>${alfresco.groupId}</groupId>
             <artifactId>alfresco-repository</artifactId>
         </dependency>
+        <!-- If we are running tests then make the H2 Scripts available
+             Note. tests are skipped when you are running -Pamp-to-war -->
+        <dependency>
+            <groupId>${alfresco.groupId}</groupId>
+            <artifactId>alfresco-repository</artifactId>
+            <version>${alfresco.version}</version>
+            <classifier>h2scripts</classifier>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
     <profiles>
     	<!-- Enterprise profile, manually activated, automatically adds support for Enterprise edition development (dependencies) -->
@@ -81,20 +96,6 @@
                     <artifactId>alfresco-enterprise-repository</artifactId>
                     <version>${alfresco.version}</version>
                     <scope>provided</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <!--
-              If the 'amp-to-war' profile is enabled then make sure to bring in the alfresco-rad module,
-              which has the H2 scripts and other RAD features.
-          -->
-        <profile>
-            <id>amp-to-war</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.alfresco.maven</groupId>
-                    <artifactId>alfresco-rad</artifactId>
-                    <version>${maven.alfresco.version}</version>
                 </dependency>
             </dependencies>
         </profile>
