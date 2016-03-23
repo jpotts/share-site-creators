@@ -12,13 +12,13 @@
     <parent>
         <groupId>org.alfresco.maven</groupId>
         <artifactId>alfresco-sdk-parent</artifactId>
-        <version>2.0.0</version>
+        <version>2.1.1</version>
     </parent>
 
-    <!-- 
+    <!--
        | SDK properties have sensible defaults in the SDK parent,
-       | but you can override the properties below to use another version. 
-       | For more available properties see the alfresco-sdk-parent POM. 
+       | but you can override the properties below to use another version.
+       | For more available properties see the alfresco-sdk-parent POM.
        -->
     <properties>
         <!--
@@ -27,34 +27,31 @@
         -->
         <!-- <alfresco.groupId>org.alfresco</alfresco.groupId> -->
         <!-- Defines the Alfresco version to work against.
-             Community versions are typically identified by major.minor.character (4.2.a) while Enterprise versions are identified by major.minor.digit (4.2.0)  -->
+             Community versions are typically identified by major.minor.character (4.2.a) while Enterprise versions are identified by major.minor.digit (4.2.0)
         <alfresco.version>5.0.d</alfresco.version>
-        <app.log.root.level>WARN</app.log.root.level>
-        <alfresco.data.location>alf_data_dev</alfresco.data.location>
+        <alfresco.data.location>alf_data_dev</alfresco.data.location> -->
         <!-- This controls which properties will be picked in src/test/properties for embedded run -->
         <env>local</env>
         <!-- Defines the target WAR artifactId to run this amp, only used with the -Pamp-to-war profile
-             | Defaults to a vanilla repository AMP, but could point to your foundation / aggregator WAR 
+             | Defaults to a vanilla repository AMP, but could point to your foundation / aggregator WAR
         .    | Allowed values for Community: alfresco | share
              | Allowed values for Enterprise: alfresco-enterprise | share-enterprise
              <alfresco.client.war>${alfresco.repo.artifactId}</alfresco.client.war> -->
-        <!-- Context path to run alfresco on -->
-        <alfresco.client.contextPath>/alfresco</alfresco.client.contextPath>
         <!-- Defines the target WAR groupId to run this amp, only used with the -Pamp-to-war switch
         .    | Could be org.alfresco or your corporate groupId -->
         <!-- <alfresco.client.war.groupId>${alfresco.groupId}</alfresco.client.war.groupId> -->
-        
+
         <!-- Defines the target WAR version to run this amp, only used with the -Pamp-to-war switch -->
         <!-- <alfresco.client.war.version>${alfresco.version}</alfresco.client.war.version>-->
     </properties>
 
-    <!-- Here we realize the connection with the Alfresco selected platform 
+    <!-- Here we realize the connection with the Alfresco selected platform
         (e.g.version and edition) -->
     <dependencyManagement>
         <dependencies>
             <!-- This will import the dependencyManagement for all artifacts in the selected Alfresco version/edition
-                (see http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies) 
-                NOTE: You still need to define dependencies in your POM, but you can omit version as it's enforced by this dependencyManagement. NOTE: It defaults 
+                (see http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Importing_Dependencies)
+                NOTE: You still need to define dependencies in your POM, but you can omit version as it's enforced by this dependencyManagement. NOTE: It defaults
                 to the latest version this SDK pom has been tested with, but alfresco version can/should be overridden in your project's pom -->
             <dependency>
                 <groupId>${alfresco.groupId}</groupId>
@@ -65,8 +62,8 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <!-- Following dependencies are needed for compiling Java code in src/main/java; 
-         <scope>provided</scope> is inherited for each of the following; 
+    <!-- Following dependencies are needed for compiling Java code in src/main/java;
+         <scope>provided</scope> is inherited for each of the following;
          for more info, please refer to alfresco-platform-distribution POM -->
     <dependencies>
         <dependency>
@@ -84,6 +81,20 @@
                     <artifactId>alfresco-enterprise-repository</artifactId>
                     <version>${alfresco.version}</version>
                     <scope>provided</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <!--
+              If the 'amp-to-war' profile is enabled then make sure to bring in the alfresco-rad module,
+              which has the H2 scripts and other RAD features.
+          -->
+        <profile>
+            <id>amp-to-war</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.alfresco.maven</groupId>
+                    <artifactId>alfresco-rad</artifactId>
+                    <version>${maven.alfresco.version}</version>
                 </dependency>
             </dependencies>
         </profile>
