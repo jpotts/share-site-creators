@@ -32,7 +32,7 @@
     <view:reference view:pathref="${system.zones_container.childname}/cm:APP.DEFAULT">
         <view:associations>
             <cm:inZone>
-                <view:reference view:pathref="${system.authorities_container.childname}/GROUP_SITE_CREATORS"
+                <view:reference view:pathref="${system.authorities_container.childname}/cm:GROUP_SITE_CREATORS"
                                 view:childName="GROUP_SITE_CREATORS" />
             </cm:inZone>
         </view:associations>
