@@ -5,3 +5,4 @@ target
 .classpath
 alfresco.log
 share.log
+.idea
