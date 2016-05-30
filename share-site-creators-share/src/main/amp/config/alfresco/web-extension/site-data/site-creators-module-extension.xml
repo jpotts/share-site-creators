@@ -3,7 +3,7 @@
         <module>
             <id>Share Site Creators</id>
             <version>1.0</version>
-            <auto-deploy>false</auto-deploy>  
+            <auto-deploy>true</auto-deploy>
             <evaluator type="group.module.evaluator">
                 <params>
                     <groups>GROUP_SITE_CREATORS</groups>
