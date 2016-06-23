@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ecmarchitect</groupId>
     <artifactId>share-site-creators-share</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3</version>
     <name>share-site-creators-share AMP project</name>
     <packaging>amp</packaging>
     <description>Hides all &quot;create site&quot; links from all users except those belonging to a specific group.</description>
@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.alfresco.maven</groupId>
         <artifactId>alfresco-sdk-parent</artifactId>
-        <version>2.1.1</version>
+        <version>2.2.0</version>
     </parent>
 
     <!--
@@ -34,7 +34,7 @@
              Community versions are typically identified by major.minor.character (4.2.a),
              while Enterprise versions are identified by major.minor.digit (4.2.0)
         -->
-        <alfresco.version>5.0.d</alfresco.version>
+        <alfresco.version>5.1.f</alfresco.version>
 
         <!-- Defines the log level used in log4j.properties -->
         <app.log.root.level>WARN</app.log.root.level>
@@ -68,9 +68,10 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-          <groupId>org.springframework.extensions.surf</groupId>
-          <artifactId>spring-surf-api</artifactId>
-          <scope>provided</scope>
+            <groupId>org.alfresco.surf</groupId>
+            <artifactId>spring-surf-api</artifactId>
+            <version>${dependency.surf.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -84,19 +85,4 @@
         </plugins>
     </build>
 
-    <profiles>
-    	<!-- Enterprise profile, manually activated, automatically adds support for Enterprise edition development (dependencies) -->
-        <profile>
-            <id>enterprise</id>
-            <dependencies>
-                <dependency>
-                    <groupId>${alfresco.groupId}</groupId>
-                    <artifactId>share-enterprise</artifactId>
-                    <version>${alfresco.version}</version>
-                    <classifier>classes</classifier>
-                    <scope>provided</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-    </profiles>
 </project>

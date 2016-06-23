@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ecmarchitect</groupId>
     <artifactId>share-site-creators-repo</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3</version>
     <name>share-site-creators-repo AMP project</name>
     <packaging>amp</packaging>
     <description>Changes the permissions so that only members of a specific group can create sites.</description>
@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.alfresco.maven</groupId>
         <artifactId>alfresco-sdk-parent</artifactId>
-        <version>2.1.1</version>
+        <version>2.2.0</version>
     </parent>
 
     <!--
@@ -27,9 +27,9 @@
         -->
         <!-- <alfresco.groupId>org.alfresco</alfresco.groupId> -->
         <!-- Defines the Alfresco version to work against.
-             Community versions are typically identified by major.minor.character (4.2.a) while Enterprise versions are identified by major.minor.digit (4.2.0)
-        <alfresco.version>5.0.d</alfresco.version>
-        <alfresco.data.location>alf_data_dev</alfresco.data.location> -->
+             Community versions are typically identified by major.minor.character (4.2.a) while Enterprise versions are identified by major.minor.digit (4.2.0) -->
+        <alfresco.version>5.1.f</alfresco.version>
+        <!--<alfresco.data.location>/absolute/path/to/alf_data_dev</alfresco.data.location>-->
         <!-- This controls which properties will be picked in src/test/properties for embedded run -->
         <env>local</env>
         <!-- Defines the target WAR artifactId to run this amp, only used with the -Pamp-to-war profile
@@ -70,6 +70,21 @@
             <groupId>${alfresco.groupId}</groupId>
             <artifactId>alfresco-repository</artifactId>
         </dependency>
+        <!-- If we are running tests then make the H2 Scripts available
+             Note. tests are skipped when you are running -Pamp-to-war -->
+        <dependency>
+            <groupId>${alfresco.groupId}</groupId>
+            <artifactId>alfresco-repository</artifactId>
+            <version>${alfresco.version}</version>
+            <classifier>h2scripts</classifier>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
     <profiles>
     	<!-- Enterprise profile, manually activated, automatically adds support for Enterprise edition development (dependencies) -->
@@ -81,20 +96,6 @@
                     <artifactId>alfresco-enterprise-repository</artifactId>
                     <version>${alfresco.version}</version>
                     <scope>provided</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <!--
-              If the 'amp-to-war' profile is enabled then make sure to bring in the alfresco-rad module,
-              which has the H2 scripts and other RAD features.
-          -->
-        <profile>
-            <id>amp-to-war</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.alfresco.maven</groupId>
-                    <artifactId>alfresco-rad</artifactId>
-                    <version>${maven.alfresco.version}</version>
                 </dependency>
             </dependencies>
         </profile>
