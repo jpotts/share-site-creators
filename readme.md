@@ -17,7 +17,7 @@ Installation
 ------------
 There are two AMPs associated with this add-on. One is a "repo tier" AMP and the other is a "Share tier" AMP.
 
-For each of the two projects, use `mvn install` to create the AMP. By default the POM is set to depend on the latest Alfresco Community Edition using the default specified by the SDK. This has not been tested with Alfresco Enterprise Edition.
+For each of the two projects, use `mvn install` to create the AMP. When running with 5.1.f, you must specify `` when running maven commands for the Share tier AMP.
 
 ### Install the AMPs
 
@@ -29,11 +29,11 @@ Once the AMPs are deployed, start up Alfresco.
 
 ### Deploy the Module in Share
 
-After starting Alfresco with the AMPs deployed, you'll need to go to the [Share Module Deployment Console](http://localhost:8080/share/service/modules/deploy) to deploy the module. After you hit "Apply Changes", log out, then log back in. If you don't already have a group created with your username in it, the "Create Site" links should be gone, even if you are an administrator.
+After starting Alfresco with the AMPs deployed, the Share module should be deployed for you automatically. If you can still see "Create Sites" you may need to deploy the module manually. To do so, go to the [Share Module Deployment Console](http://localhost:8080/share/service/modules/deploy) to deploy the module. After you hit "Apply Changes", log out, then log back in. If you don't already have a group created with your username in it, the "Create Site" links should be gone, even if you are an administrator.
 
 ### Create and Populate the Group
 
-Now go create a new group with an ID of "GROUP_SITE_CREATORS". You can add individuals and groups to this group. For example, at the very least you will probably want to add ALFRESCO_ADMINISTRATORS to this group.
+The SITE_CREATORS group will be created for you automatically. If, for some reason, it does not get created, create a new group with an ID of "GROUP_SITE_CREATORS". You can add individuals and groups to this group. For example, at the very least you will probably want to add ALFRESCO_ADMINISTRATORS to this group.
 
 Using a Different Group Name
 ------------------------

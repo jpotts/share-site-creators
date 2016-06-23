@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ecmarchitect</groupId>
     <artifactId>share-site-creators-share</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3</version>
     <name>share-site-creators-share AMP project</name>
     <packaging>amp</packaging>
     <description>Hides all &quot;create site&quot; links from all users except those belonging to a specific group.</description>
@@ -34,7 +34,7 @@
              Community versions are typically identified by major.minor.character (4.2.a),
              while Enterprise versions are identified by major.minor.digit (4.2.0)
         -->
-        <!--<alfresco.version>5.0.d</alfresco.version>-->
+        <alfresco.version>5.1.f</alfresco.version>
 
         <!-- Defines the log level used in log4j.properties -->
         <app.log.root.level>WARN</app.log.root.level>
@@ -68,9 +68,10 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-          <groupId>org.springframework.extensions.surf</groupId>
-          <artifactId>spring-surf-api</artifactId>
-          <scope>provided</scope>
+            <groupId>org.alfresco.surf</groupId>
+            <artifactId>spring-surf-api</artifactId>
+            <version>${dependency.surf.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
