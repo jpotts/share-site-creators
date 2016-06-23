@@ -17,7 +17,7 @@ Installation
 ------------
 There are two AMPs associated with this add-on. One is a "repo tier" AMP and the other is a "Share tier" AMP.
 
-For each of the two projects, use `mvn install` to create the AMP. When running with 5.1.f, you must specify `` when running maven commands for the Share tier AMP.
+For each of the two projects, use `mvn install` to create the AMP. When running with 5.1.f, you must specify `-Ddependency.surf.version=6.3` when running maven commands for the Share tier AMP.
 
 ### Install the AMPs
 

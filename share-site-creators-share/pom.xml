@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ecmarchitect</groupId>
     <artifactId>share-site-creators-share</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>share-site-creators-share AMP project</name>
     <packaging>amp</packaging>
     <description>Hides all &quot;create site&quot; links from all users except those belonging to a specific group.</description>
