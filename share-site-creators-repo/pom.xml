@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ecmarchitect</groupId>
     <artifactId>share-site-creators-repo</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <name>share-site-creators-repo AMP project</name>
     <packaging>amp</packaging>
     <description>Changes the permissions so that only members of a specific group can create sites.</description>
