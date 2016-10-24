@@ -4,39 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.metaversant</groupId>
     <artifactId>share-site-creators-repo</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
     <packaging>amp</packaging>
 
     <name>share-site-creators-repo AMP project</name>
     <description>Changes the permissions so that only members of a specific group can create sites.</description>
-    <url>https://github.com/jpotts/share-site-creators</url>
-
-    <licenses>
-      <license>
-        <name>The Apache License, Version 2.0</name>
-        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      </license>
-    </licenses>
-
-    <developers>
-      <developer>
-        <name>Jeff Potts</name>
-        <email>info@metaversant.com</email>
-        <organization>Metaversant Group, Inc.</organization>
-        <organizationUrl>http://www.metaversant.com</organizationUrl>
-      </developer>
-    </developers>
-
-    <scm>
-      <connection>scm:git:git://github.com/jpotts/share-site-creators.git</connection>
-      <developerConnection>scm:git:ssh://github.com:jpotts/share-site-creators.git</developerConnection>
-      <url>http://github.com/jpotts/share-site-creators/tree/master</url>
-    </scm>
 
     <parent>
-        <groupId>org.alfresco.maven</groupId>
-        <artifactId>alfresco-sdk-parent</artifactId>
-        <version>2.2.0</version>
+        <groupId>com.metaversant</groupId>
+        <artifactId>share-site-creators</artifactId>
+        <version>0.0.5-SNAPSHOT</version>
     </parent>
 
     <!--
