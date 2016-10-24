@@ -2,12 +2,36 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.ecmarchitect</groupId>
+    <groupId>com.metaversant</groupId>
     <artifactId>share-site-creators-share</artifactId>
-    <version>0.0.4</version>
-    <name>share-site-creators-share AMP project</name>
+    <version>0.0.5-SNAPSHOT</version>
     <packaging>amp</packaging>
+
+    <name>share-site-creators-share AMP project</name>
     <description>Hides all &quot;create site&quot; links from all users except those belonging to a specific group.</description>
+    <url>https://github.com/jpotts/share-site-creators</url>
+
+    <licenses>
+      <license>
+        <name>The Apache License, Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      </license>
+    </licenses>
+
+    <developers>
+      <developer>
+        <name>Jeff Potts</name>
+        <email>info@metaversant.com</email>
+        <organization>Metaversant Group, Inc.</organization>
+        <organizationUrl>http://www.metaversant.com</organizationUrl>
+      </developer>
+    </developers>
+
+    <scm>
+      <connection>scm:git:git://github.com/jpotts/share-site-creators.git</connection>
+      <developerConnection>scm:git:ssh://github.com:jpotts/share-site-creators.git</developerConnection>
+      <url>http://github.com/jpotts/share-site-creators/tree/master</url>
+    </scm>
 
     <parent>
         <groupId>org.alfresco.maven</groupId>
