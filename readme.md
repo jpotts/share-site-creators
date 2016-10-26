@@ -13,8 +13,59 @@ By default, the group the module looks for must have an ID of "GROUP_SITE_CREATO
 
 This add-on also changes the low-level permissions so that even if someone figures out how to create a site without the user interface, the repository tier won't let them do that unless they are in the group.
 
-Installation
-------------
+Maven
+-----
+Add the dependencies and overlays to the POM files of your WAR projects.
+
+For the repository tier, in a project created with the all-in-one archetype, edit repo/pom.xml:
+
+
+    <dependencies>
+      ...
+      <dependency>
+          <groupId>com.metaversant</groupId>
+          <artifactId>share-site-creators-repo</artifactId>
+          <version>0.0.5</version>
+          <type>amp</type>
+      </dependency>
+      ...
+    </dependencies>
+
+    <overlays>
+      ...
+      <overlay>
+          <groupId>com.metaversant</groupId>
+          <artifactId>share-site-creators-repo</artifactId>
+          <type>amp</type>
+      </overlay>
+      ...
+    </overlays>
+
+For the Share tier, in a project created with the all-in-one archetype, edit share/pom.xml:
+
+    <dependencies>
+      ...
+      <dependency>
+          <groupId>com.metaversant</groupId>
+          <artifactId>share-site-creators-share</artifactId>
+          <version>0.0.5</version>
+          <type>amp</type>
+      </dependency>
+      ...
+    </dependencies>
+
+    <overlays>
+      ...
+      <overlay>
+          <groupId>com.metaversant</groupId>
+          <artifactId>share-site-creators-share</artifactId>
+          <type>amp</type>
+      </overlay>
+      ...
+    </overlays>
+
+Manual Installation
+-------------------
 There are two AMPs associated with this add-on. One is a "repo tier" AMP and the other is a "Share tier" AMP.
 
 For each of the two projects, use `mvn install` to create the AMP. When running with 5.1.f, you must specify `-Ddependency.surf.version=6.3` when running maven commands for the Share tier AMP.
