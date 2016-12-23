@@ -20,6 +20,10 @@
                     <targetPackageRoot>org.alfresco.share.header</targetPackageRoot>
                     <sourcePackageRoot>com.ecmarchitect.share.header</sourcePackageRoot>
                 </customization>
+                <customization>
+                    <targetPackageRoot>org.alfresco.share.pages</targetPackageRoot>
+                    <sourcePackageRoot>com.ecmarchitect.share.pages</sourcePackageRoot>
+                </customization>
             </customizations>
         </module>
     </modules>
