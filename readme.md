@@ -13,6 +13,11 @@ By default, the group the module looks for must have an ID of "GROUP_SITE_CREATO
 
 This add-on also changes the low-level permissions so that even if someone figures out how to create a site without the user interface, the repository tier won't let them do that unless they are in the group.
 
+Compatibility
+-------------
+
+Old versions of this add-on will work with older versions of Alfresco. Starting with version 0.0.6, you must be running 5.1 or higher.
+
 Maven
 -----
 Add the dependencies and overlays to the POM files of your WAR projects.
