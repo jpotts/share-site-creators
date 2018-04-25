@@ -7,3 +7,4 @@ alfresco.log
 share.log
 .idea
 *.log
+*.log.*

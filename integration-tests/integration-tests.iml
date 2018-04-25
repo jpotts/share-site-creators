@@ -19,9 +19,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.httpcomponents:httpcore:4.4.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-codec:commons-codec:1.10" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-repository:5.2.f" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-legacy-lucene:5.2.f" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-data-model:6.8" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-repository:5.2.g" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-legacy-lucene:5.2.g" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-data-model:6.16" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jaxen:jaxen:1.1.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jibx:jibx-run:1.2.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.antlr:antlr:3.5.2" level="project" />
@@ -52,7 +52,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tika:tika-parsers:1.6-20160727-alfresco-patched" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.james:apache-mime4j-core:0.7.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.james:apache-mime4j-dom:0.7.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.bouncycastle:bcmail-jdk15:1.45" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: de.l3s.boilerpipe:boilerpipe:1.1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: rome:rome:0.9" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: jdom:jdom:1.0" level="project" />
@@ -65,11 +64,11 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.lucene:lucene-analyzers:2.4.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.lucene:lucene-regex:2.4.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.lucene:lucene-snowball:2.4.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-jlan-embed:6.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-jlan-embed:6.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.hazelcast:hazelcast:2.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.hazelcast:hazelcast-spring:2.4" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-mbeans:5.2.f" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-core:6.10" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-mbeans:5.2.g" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-core:6.13" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-httpclient:commons-httpclient:3.1-HTTPCLIENT-1265" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.commons:commons-math3:3.6.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.hibernate:hibernate:3.2.6-alf-20131023" level="project" />
@@ -94,7 +93,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.services:alfresco-events:1.2.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.mail:javax.mail:1.5.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:activation:1.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-greenmail:5.2.f" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco:alfresco-greenmail:5.2.g" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-dbcp:commons-dbcp:1.4-DBCP330" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-digester:commons-digester:2.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: commons-discovery:commons-discovery:0.5" level="project" />
@@ -151,6 +150,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:fontbox:1.8.10" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.pdfbox:jempbox:1.8.10" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.bouncycastle:bcprov-jdk15:1.46" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.bouncycastle:bcmail-jdk15:1.46" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.googlecode.mp4parser:isoparser:1.1.21" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.drewnoakes:metadata-extractor:2.7.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.adobe.xmp:xmpcore:5.1.2" level="project" />
@@ -185,11 +185,11 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: edu.ucar:unidataCommon:4.2.20" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.jcip:jcip-annotations:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:jstl:1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.surf:spring-surf-core-configservice:6.12" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.surf:spring-surf-core:6.12" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.surf:spring-webscripts:6.12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.surf:spring-surf-core-configservice:6.13" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.surf:spring-surf-core:6.13" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.surf:spring-webscripts:6.13" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:spring-webmvc:3.2.17.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.surf:spring-webscripts-api:6.12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.alfresco.surf:spring-webscripts-api:6.13" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.social:spring-social-core:1.0.3.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.social:spring-social-linkedin:1.0.0-20110711" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework.social:spring-social-facebook:1.1.1.RELEASE" level="project" />

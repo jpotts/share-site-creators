@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.metaversant</groupId>
     <artifactId>share-site-creators</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.8-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Share Site Creators</name>
@@ -59,8 +59,8 @@
       <!-- Alfresco Platform and Share webapp versions, these are the original Alfresco webapps that will be
            customized and then deployed and run by the tomcat maven plugin when
            executing for example $ mvn clean install alfresco:run -->
-      <alfresco.platform.version>5.2.f</alfresco.platform.version>
-      <alfresco.share.version>5.2.e</alfresco.share.version>
+      <alfresco.platform.version>5.2.g</alfresco.platform.version>
+      <alfresco.share.version>5.2.f</alfresco.share.version>
 
       <!-- Default is to run with a Community edition, change to 'enterprise' if using Enterprise edition -->
       <maven.alfresco.edition>community</maven.alfresco.edition>
