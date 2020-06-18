@@ -6,5 +6,6 @@ target
 alfresco.log
 share.log
 .idea
+*.iml
 *.log
 *.log.*
