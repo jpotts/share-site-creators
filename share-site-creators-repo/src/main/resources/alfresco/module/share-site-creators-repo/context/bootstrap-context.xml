@@ -23,7 +23,7 @@
         <property name="description"><value>share-site-creators-repo.groupsLoader.description</value></property>
         <property name="fixesFromSchema"><value>0</value></property>
         <property name="fixesToSchema"><value>${version.schema}</value></property>
-        <property name="targetSchema"><value>15000</value></property>
+        <property name="targetSchema"><value>20000</value></property>
         <property name="importerBootstrap">
             <ref bean="spacesBootstrap" />
         </property>
