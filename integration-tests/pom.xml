@@ -11,7 +11,7 @@
     <parent>
         <groupId>com.metaversant</groupId>
         <artifactId>share-site-creators</artifactId>
-        <version>0.0.8-SNAPSHOT</version>
+        <version>0.0.8</version>
     </parent>
 
     <properties>
@@ -23,7 +23,7 @@
         <dependency>
             <groupId>com.metaversant</groupId>
             <artifactId>share-site-creators-repo</artifactId>
-            <version>0.0.8-SNAPSHOT</version>
+            <version>0.0.8</version>
             <scope>test</scope>
         </dependency>
 
